@@ -21,7 +21,7 @@ exports.md5 = function(s) {
  * @return {string}
  */
 exports.randString = function(length) {
-  len = len || 32;
+  length = length || 32;
   let dict = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
   let str = '';
   for (let i = 0; i < length; i++) {

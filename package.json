@@ -1,0 +1,27 @@
+{
+  "name": "zhike-util",
+  "version": "1.0.0",
+  "description": "public function library for zhike",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhike-team/zhike-util.git"
+  },
+  "author": "xubensheng <http://fengliner.github.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhike-team/zhike-util/issues"
+  },
+  "dependencies": {
+    "crypto": "0.0.3",
+    "request": "^2.78.0",
+    "thunkify-wrap": "^1.0.4"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.1"
+  }
+}

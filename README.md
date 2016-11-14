@@ -138,7 +138,10 @@ var util = require('zhike-util');
 var co = require('co');
 co(function*() {
   yield util.request({
-    uri: 'http://api.smartstudy.com/user/count'
+    uri: 'http://api.smartstudy.com/user/count',
+    qs: {
+      source: 'www.smartstudy.com'
+    }
   });
   yield util.request({
     uri: 'http://api.smartstudy.com/user/signup/phone',

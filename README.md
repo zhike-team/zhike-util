@@ -2,21 +2,22 @@
 
 public function library for zhike
 
-## install
+## INSTALL
 
   npm install zhike-util
 
-## api
+## API
 
-+ [md5](#md5)
-+ [randString](#randString)
-+ [getFields](#getFields)
-+ [toCamel](#toCamel)
-+ [getIp](#getIp)
-+ [dateFormat](#dateFormat)
-+ [request](#request)
++ [md5](#jumpMd5)
++ [randString](#jumpRandString)
++ [getFields](#jumpGetFields)
++ [toCamel](#jumpToCamel)
++ [getIp](#jumpGetIp)
++ [dateFormat](#jumpDateFormat)
++ [request](#jumpRequest)
 
 ### md5(s)
+<span id='jumpMd5'></span>
 Hash a string with md5
 
 Params
@@ -29,7 +30,9 @@ Usage
 var util = require('zhike-util');
 util.md5('hello');  // 5d41402abc4b2a76b9719d911017c592
 ```
+
 ### randString(length)
+<span id='jumpRandString'></span>
 Generate a specified length string randomly
 
 Params
@@ -44,6 +47,7 @@ util.randString(8);  // B2UT7Z3E
 ```
 
 ### getFields(data, fields, notSetNull)
+<span id='jumpGetFields'></span>
 Extract fields which contains by data
 
 Params
@@ -67,6 +71,7 @@ util.getFields(data, fields, true);  // {id: 1, name: 'fengliner', age: undefine
 ```
 
 ### toCamel(name)
+<span id='jumpToCamel'></span>
 Convert underlined or middlelined string to camel
 
 Params
@@ -82,6 +87,7 @@ util.toCamel(name);  // loveIsLove
 ```
 
 ### getIp(req)
+<span id='jumpGetIp'></span>
 Get ip address from the request header
 
 Params
@@ -100,6 +106,7 @@ app.use(function(req, res, next) {
 ```
 
 ### dateFormat(fmt, d)
+<span id='jumpDateFormat'></span>
 Format a specified date
 
 Params
@@ -117,6 +124,7 @@ util.dateFormat('yyyy-MM-dd HH:mm:ss', date);  // 2016-11-14 10:55:37
 ```
 
 ### request(options, callback)
+<span id='jumpRequest'></span>
 Thunkify request which could be used by yield directly
 
 Params
@@ -143,6 +151,6 @@ co(function*() {
 })
 ```
 
-## test
+## TEST
 
   npm run test

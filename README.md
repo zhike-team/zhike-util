@@ -13,6 +13,7 @@ public function library for zhike
 + [getFields](#jumpGetFields)
 + [toCamel](#jumpToCamel)
 + [getIp](#jumpGetIp)
++ [getLocationFromIP](#jumpGetLocationFromIP)
 + [dateFormat](#jumpDateFormat)
 + [request](#jumpRequest)
 
@@ -103,6 +104,28 @@ app.use(function(req, res, next) {
   util.getIp(req);  // 127.0.0.1
   next();
 })
+```
+
+### getLocationFromIP(ip)
+<span id='jumpGetLocationFromIP'></span>
+Get location from ip
+
+Params
+
++ ip(String)
+
+Usage
+
+```js
+var util = require('zhike-util');
+util.getLocationFromIP('140.205.220.96');
+// output
+{ 
+  int: 2362301536,
+  ip: '140.205.220.96',
+  Country: '浙江省杭州市',
+  Area: '阿里云BGP数据中心' 
+}
 ```
 
 ### dateFormat(fmt, d)

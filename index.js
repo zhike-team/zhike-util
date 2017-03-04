@@ -3,6 +3,7 @@
 const crypto = require('crypto');
 const thunkify = require('thunkify-wrap');
 const request = require('request');
+const libqqwry = require('lib-qqwry');
 
 
 /**
@@ -92,6 +93,19 @@ exports.getIp = function(req) {
 
 
 /**
+ * 根据IP地址获取城市
+ * @param req 请求头
+ * @return ip
+ */
+exports.getLocationFromIP = function(ip) {
+  let qqwry = libqqwry.init();
+  qqwry.speed();  
+  let location = qqwry.searchIP(ip);
+  return location;
+};
+
+
+/**
  * 格式化日期
  * @param {string} fmt 日期格式字符串，如'yyyyddMMmmHHss'
  * @param {date} d 日期
@@ -146,3 +160,4 @@ exports.request = thunkify(function(options, callback) {
     callback(null, body);
   })
 });
+

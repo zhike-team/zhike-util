@@ -48,6 +48,16 @@ describe('Zhike-Util', function() {
     })
   });
 
+  describe('#getLocationFromIP', function() {
+    it('should get location from ip', function() {
+      let data = util.getLocationFromIP('0.0.0.0');
+      expect(data.int).equal(0);
+      expect(data.ip).equal('0.0.0.0');
+      expect(data.Country).equal('IANA');
+      expect(data.Area).equal('保留地址');
+    })
+  });
+
   describe('#dateFormat', function() {
     it('should get a specified format date', function() {
       let data = util.dateFormat('yyyy-dd-MM mm:HH:ss', new Date());

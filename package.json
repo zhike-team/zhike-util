@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "crypto": "0.0.3",
+    "lib-qqwry": "^1.0.1",
     "request": "^2.78.0",
     "thunkify-wrap": "^1.0.4"
   },

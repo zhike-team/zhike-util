@@ -4,3 +4,4 @@ bower_components
 *.log
 *.todo
 *.psd
+test.js

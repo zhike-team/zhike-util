@@ -3,8 +3,6 @@
 const crypto = require('crypto');
 const thunkify = require('thunkify-wrap');
 const request = require('request');
-const libqqwry = require('lib-qqwry');
-
 
 /**
  * md5

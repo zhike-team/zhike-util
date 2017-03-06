@@ -93,15 +93,26 @@ exports.getIp = function(req) {
 
 
 /**
- * 根据IP地址获取城市
+ * 根据IP地址获取IP的关联信息
  * @param req 请求头
  * @return ip
  */
-exports.getLocationFromIP = function(ip) {
-  let qqwry = libqqwry.init();
-  qqwry.speed();  
-  let location = qqwry.searchIP(ip);
-  return location;
+exports.getIpInfo = function(ip) {
+  return new Promise(function(resolve, reject) {
+    request({
+      methos: 'GET',
+      url: 'http://ip.taobao.com/service/getIpInfo.php',
+      qs: {
+        ip: ip
+      }
+    }, function(err, res, body) {
+      if (err) {
+        reject(err);
+      }
+      body = JSON.parse(body);
+      resolve(body);
+    });
+  });
 };
 
 

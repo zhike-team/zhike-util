@@ -13,7 +13,7 @@ public function library for zhike
 + [getFields](#jumpGetFields)
 + [toCamel](#jumpToCamel)
 + [getIp](#jumpGetIp)
-+ [getLocationFromIP](#jumpGetLocationFromIP)
++ [getIPInfo](#jumpGetIPInfo)
 + [dateFormat](#jumpDateFormat)
 + [request](#jumpRequest)
 
@@ -106,7 +106,7 @@ app.use(function(req, res, next) {
 })
 ```
 
-### getLocationFromIP(ip)
+### getIPInfo(ip)
 <span id='jumpGetLocationFromIP'></span>
 Get location from ip
 
@@ -117,15 +117,36 @@ Params
 Usage
 
 ```js
-var util = require('zhike-util');
-util.getLocationFromIP('140.205.220.96');
-// output
-{ 
-  int: 2362301536,
-  ip: '140.205.220.96',
-  Country: '浙江省杭州市',
-  Area: '阿里云BGP数据中心' 
-}
+let util = require('./index');
+
+util.getIpInfo('124.207.253.186').then(function(data) {
+  console.log(data);
+  // output
+  { code: 0,
+    data: { 
+      country: '中国',
+      country_id: 'CN',
+      area: '华北',
+      area_id: '100000',
+      region: '北京市',
+      region_id: '110000',
+      city: '北京市',
+      city_id: '110100',
+      county: '',
+      county_id: '-1',
+      isp: '鹏博士',
+      isp_id: '1000143',
+      ip: '124.207.253.186' 
+    } 
+  }
+})
+
+util.getIpInfo('124.207.253.300').then(function(data) {
+  console.log(data);
+  // output
+  { code: 1, data: 'invaild ip.' }
+})
+
 ```
 
 ### dateFormat(fmt, d)

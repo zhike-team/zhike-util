@@ -48,13 +48,13 @@ describe('Zhike-Util', function() {
     })
   });
 
-  describe('#getLocationFromIP', function() {
-    it('should get location from ip', function() {
-      let data = util.getLocationFromIP('0.0.0.0');
-      expect(data.int).equal(0);
-      expect(data.ip).equal('0.0.0.0');
-      expect(data.Country).equal('IANA');
-      expect(data.Area).equal('保留地址');
+  describe('#getIPInfo', function(done) {
+    it('should get ip info from ip', function() {
+      util.getIpInfo('0.0.0.0').then(function(res) {
+        expect(res.data.country_id).equal('IANA');
+        expect(res.data.ip).equal('0.0.0.0');
+        done();
+      });
     })
   });
 

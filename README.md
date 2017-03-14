@@ -17,8 +17,7 @@ public function library for zhike
 + [dateFormat](#jumpDateFormat)
 + [request](#jumpRequest)
 
-### md5(s)
-<span id='jumpMd5'></span>
+### <a name="jumpMd5"></a> md5(s)
 Hash a string with md5
 
 Params
@@ -32,8 +31,7 @@ var util = require('zhike-util');
 util.md5('hello');  // 5d41402abc4b2a76b9719d911017c592
 ```
 
-### randString(length)
-<span id='jumpRandString'></span>
+### <a name="jumpRandString"></a> randString(length)
 Generate a specified length string randomly
 
 Params
@@ -47,8 +45,7 @@ var util = require('zhike-util');
 util.randString(8);  // B2UT7Z3E
 ```
 
-### getFields(data, fields, notSetNull)
-<span id='jumpGetFields'></span>
+### <a name="jumpGetFields"></a> getFields(data, fields, notSetNull)
 Extract fields which contains by data
 
 Params
@@ -71,8 +68,7 @@ util.getFields(data, fields);  // {id: 1, name: 'fengliner', age: ''}
 util.getFields(data, fields, true);  // {id: 1, name: 'fengliner', age: undefined}
 ```
 
-### toCamel(name)
-<span id='jumpToCamel'></span>
+### <a name="jumpToCamel"></a> toCamel(name)
 Convert underlined or middlelined string to camel
 
 Params
@@ -87,8 +83,7 @@ var name = 'love_is-love';
 util.toCamel(name);  // loveIsLove
 ```
 
-### getIp(req)
-<span id='jumpGetIp'></span>
+### <a name="jumpGetIp"></a> getIp(req)
 Get ip address from the request header
 
 Params
@@ -106,8 +101,7 @@ app.use(function(req, res, next) {
 })
 ```
 
-### getIPInfo(ip)
-<span id='jumpGetLocationFromIP'></span>
+### <a name="jumpGetIPInfo"></a> getIPInfo(ip)
 Get location from ip
 
 Params
@@ -149,8 +143,7 @@ util.getIpInfo('124.207.253.300').then(function(data) {
 
 ```
 
-### dateFormat(fmt, d)
-<span id='jumpDateFormat'></span>
+### <a name="jumpDateFormat"></a> dateFormat(fmt, d)
 Format a specified date
 
 Params
@@ -167,8 +160,7 @@ util.dateFormat('yyyyMMddHHmmss', date);  // 20161114105537
 util.dateFormat('yyyy-MM-dd HH:mm:ss', date);  // 2016-11-14 10:55:37
 ```
 
-### request(options, callback)
-<span id='jumpRequest'></span>
+### <a name="jumpRequest"></a> request(options, callback)
 Thunkify request which could be used by yield directly
 
 Params

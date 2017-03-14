@@ -101,7 +101,7 @@ app.use(function(req, res, next) {
 })
 ```
 
-### <a name="jumpGetLocationFromIP"></a> getIPInfo(ip)
+### <a name="jumpGetIpInfo"></a> getIPInfo(ip)
 Get location from ip
 
 Params

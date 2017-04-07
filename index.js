@@ -24,7 +24,7 @@ exports.randString = function(length) {
   let dict = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
   let str = '';
   for (let i = 0; i < length; i++) {
-    str += dict[parseInt(Math.random() * dict.length)];
+    str += dict[Math.floor(Math.random() * dict.length)];
   }
   return str;
 };

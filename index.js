@@ -102,6 +102,9 @@ exports.getIpInfo = function(ip) {
       url: 'http://ip.taobao.com/service/getIpInfo.php',
       qs: {
         ip: ip
+      },
+      headers: {
+        'Cache-Control': 'no-cache'
       }
     }, function(err, res, body) {
       if (err) {
